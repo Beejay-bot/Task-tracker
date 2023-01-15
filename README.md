@@ -1,4 +1,4 @@
-# crash-course
+# Task tracker
 
 ## Project setup
 ```
