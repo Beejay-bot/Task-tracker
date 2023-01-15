@@ -2,7 +2,11 @@
 <template>
   <header>
     <h1>{{ title }}</h1>
-    <Button text="Add Task" color="green" />
+    <Button
+      :text="showAddTask ? 'Close' : 'Add Task'"
+      :color="showAddTask ? 'red' : 'green'"
+      @btn-click="$emit('toggle-add-task')"
+    />
   </header>
 </template>
 
@@ -19,6 +23,7 @@ export default {
       type: String, // state the type or expected datatype that is meant to be passed to this component.
       default: "Hello, this is an header component", // the default data of this props if nothing is not passed.
     },
+    showAddTask: Boolean,
   },
   components: {
     Button,
